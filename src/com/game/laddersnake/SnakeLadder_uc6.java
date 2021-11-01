@@ -26,6 +26,9 @@ public class SnakeLadder_uc6 {
 			if (playerPosition > 100) {
 				playerPosition = temp;
 			}
+			System.out.println("player get another chance to roll dice ");
+			SnakeLadder_uc6 game = new SnakeLadder_uc6();
+			playerPosition = game.snakeLadderGame(playerPosition, player);
 			break;
 		case SNAKE:
 			System.out.println("player entered snake position ");
@@ -46,7 +49,7 @@ public class SnakeLadder_uc6 {
 	public static void main(String[] args) {
 		int player1Position = 0, player2Position = 0, player1 = 1, player2 = 2;
 
-		SnakeLadder_uc6 game = new SnakeLadder_uc6();
+		 SnakeLadder_uc6 game = new SnakeLadder_uc6();
 
 		while (true) {
 			player1Position = game.snakeLadderGame(player1Position, player1);
